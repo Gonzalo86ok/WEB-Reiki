@@ -1,0 +1,120 @@
+.cursos {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 30px 20px;
+}
+.cursos h1, .cursos h2 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #b88258;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+}
+.cursos h2 {
+    font-size: 1.4rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    color: #a76a4b;
+}
+.cursos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 36px;
+    width: 100%;
+}
+.curso-card {
+    background: #fff7f2;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #ffe1cf70;
+    padding: 26px 18px 18px 18px;
+    max-width: 310px;
+    flex: 1 0 240px;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    transition: box-shadow .18s, transform .17s;
+    border: 2px solid #fbeee2;
+}
+.curso-card:hover {
+    box-shadow: 0 6px 24px #ffccab80;
+    transform: translateY(-6px) scale(1.015);
+}
+.curso-card h2, .curso-card h3 {
+    font-size: 1.14rem;
+    margin-bottom: 10px;
+    color: #a76a4b;
+    letter-spacing: 1px;
+}
+.curso-card p {
+    font-size: 1rem;
+    color: #543524;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.curso-card ul {
+    font-size: 0.96rem;
+    margin-bottom: 10px;
+    color: #6e3d29;
+    padding-left: 18px;
+}
+.curso-card li {
+    margin-bottom: 5px;
+}
+.leer-mas {
+    align-self: flex-end;
+    background: #ffd7b5;
+    color: #b88258;
+    padding: 7px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background .2s, color .2s;
+    font-size: 0.98rem;
+    margin-top: 8px;
+    box-shadow: 0 1px 5px #ffe1cf70;
+}
+.leer-mas:hover {
+    background: #f38c5a;
+    color: #fff;
+}
+.detalle-curso {
+    max-width: 700px;
+    margin: 25px auto 15px auto;
+    background: #fff;
+    padding: 16px 22px;
+    border-radius: 14px;
+    font-size: 1.07rem;
+    color: #91543c;
+    box-shadow: 0 2px 9px #ffe1cf66;
+    text-align: center;
+    border: 2px solid #fbeee2;
+}
+
+@media (max-width: 950px) {
+    .cursos-grid {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .curso-card {
+        max-width: 95vw;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .cursos {
+        padding: 0 7px 20px 7px;
+    }
+    .curso-card {
+        padding: 18px 7px 14px 7px;
+    }
+    .detalle-curso {
+        padding: 12px 6px;
+    }
+}
