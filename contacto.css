@@ -1,0 +1,97 @@
+.contacto-container {
+    background: #fff7f2;
+    border-radius: 20px;
+    max-width: 520px;
+    margin: 48px auto 38px auto;
+    padding: 32px 22px 28px 22px;
+    box-shadow: 0 2px 18px #ffdecd44;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-container h1 {
+    color: #b88258;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.contacto-descripcion {
+    color: #91543c;
+    font-size: 1.13rem;
+    text-align: center;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.form-contacto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.form-contacto label {
+    font-weight: 700;
+    color: #a76a4b;
+    margin-bottom: 2px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+    font-family: inherit;
+    border: 1.5px solid #eecdb6;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #543524;
+    background: #fff;
+    transition: border .18s;
+    outline: none;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+    border: 1.5px solid #b88258;
+}
+
+.form-contacto button {
+    margin-top: 7px;
+    background: #ffd7b5;
+    color: #b88258;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 0;
+    font-size: 1.12rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #ffe1cf70;
+    transition: background .18s, color .18s;
+}
+
+.form-contacto button:hover {
+    background: #f38c5a;
+    color: #fff;
+}
+
+.redes-contacto {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 1.07rem;
+    color: #8d4d30;
+    justify-content: center;
+}
+.redes-contacto img {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0 1px 6px #ffb98033);
+    transition: transform .15s;
+}
+.redes-contacto img:hover {
+    transform: scale(1.11) rotate(-4deg);
+}

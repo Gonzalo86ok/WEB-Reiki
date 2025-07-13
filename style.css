@@ -1,8 +1,10 @@
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
 body {
     min-height: 100vh;
     display: flex;
@@ -11,10 +13,12 @@ body {
     background: #fdf6f3;
     color: #543524;
 }
+
 header {
     background: #fff7f2;
     box-shadow: 0 2px 8px #eededb33;
 }
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -25,6 +29,7 @@ header {
     position: relative;
     width: 100%;
 }
+
 .logo img {
     height: 150px;
     width: auto;
@@ -32,6 +37,7 @@ header {
     background: #fff;
     box-shadow: 0 2px 12px #eebfa833;
 }
+
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -42,7 +48,10 @@ header {
     height: 36px;
     z-index: 30;
 }
-.menu-toggle span, .menu-toggle span:before, .menu-toggle span:after {
+
+.menu-toggle span,
+.menu-toggle span:before,
+.menu-toggle span:after {
     display: block;
     position: absolute;
     height: 5px;
@@ -51,17 +60,36 @@ header {
     border-radius: 5px;
     transition: .3s ease;
 }
-.menu-toggle span { top: 16px; }
-.menu-toggle span:before { content: ''; top: -12px; }
-.menu-toggle span:after { content: ''; top: 12px; }
-#nav-check { display: none; }
+
+.menu-toggle span {
+    top: 16px;
+}
+
+.menu-toggle span:before {
+    content: '';
+    top: -12px;
+}
+
+.menu-toggle span:after {
+    content: '';
+    top: 12px;
+}
+
+#nav-check {
+    display: none;
+}
+
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-nav ul li { margin-left: 30px; }
+
+nav ul li {
+    margin-left: 30px;
+}
+
 nav ul li a {
     color: #995c3d;
     text-decoration: none;
@@ -70,7 +98,11 @@ nav ul li a {
     transition: color .2s;
     letter-spacing: 0.5px;
 }
-nav ul li a:hover { color: #f38c5a; }
+
+nav ul li a:hover {
+    color: #f38c5a;
+}
+
 nav ul li a.active,
 nav ul li a.active:visited {
     background: #ffd7b5;
@@ -81,6 +113,7 @@ nav ul li a.active:visited {
     box-shadow: 0 2px 7px #ffe1cfb2;
     transition: background 0.2s, color 0.2s;
 }
+
 main {
     flex: 1 0 auto;
     min-height: 60vh;
@@ -88,6 +121,7 @@ main {
     justify-content: center;
     align-items: center;
 }
+
 footer {
     background: #f9ebe7;
     color: #8d4d30;
@@ -99,6 +133,7 @@ footer {
     width: 100%;
     margin-top: auto;
 }
+
 .contenido {
     background: #fff7f2;
     border-radius: 22px;
@@ -111,6 +146,7 @@ footer {
     flex-direction: column;
     gap: 14px;
 }
+
 .volver {
     margin-top: 25px;
     align-self: flex-start;
@@ -124,7 +160,12 @@ footer {
     font-size: 1rem;
     box-shadow: 0 1px 5px #ffe1cf70;
 }
-.volver:hover { background: #f38c5a; color: #fff; }
+
+.volver:hover {
+    background: #f38c5a;
+    color: #fff;
+}
+
 .grid-cursos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -132,6 +173,7 @@ footer {
     margin-top: 32px;
     width: 100%;
 }
+
 .curso-card {
     background: #fff;
     border-radius: 16px;
@@ -142,8 +184,19 @@ footer {
     align-items: center;
     transition: box-shadow .2s, transform .2s;
 }
-.curso-card h3 { font-size: 1.13rem; color: #b88258; margin-bottom: 10px; }
-.curso-card p { font-size: 1.01rem; color: #6e4323; text-align: center; }
+
+.curso-card h3 {
+    font-size: 1.13rem;
+    color: #b88258;
+    margin-bottom: 10px;
+}
+
+.curso-card p {
+    font-size: 1.01rem;
+    color: #6e4323;
+    text-align: center;
+}
+
 .curso-card .leer-mas {
     margin-top: 18px;
     background: #ffd7b5;
@@ -157,16 +210,70 @@ footer {
     box-shadow: 0 1px 5px #ffe1cf70;
     display: inline-block;
 }
-.curso-card .leer-mas:hover { background: #f38c5a; color: #fff; }
+
+.curso-card .leer-mas:hover {
+    background: #f38c5a;
+    color: #fff;
+}
+
 .curso-card:hover {
     box-shadow: 0 4px 28px #ffccab75;
     transform: translateY(-4px) scale(1.01);
 }
 
-@media (max-width: 900px) {
-    .nav-container { max-width: 98vw; }
-    .logo img { height: 100px; }
+.whatsapp-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 999;
+    background: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px #25d36655;
+    width: 59px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.18s, transform 0.18s;
+    text-decoration: none;
 }
+
+.whatsapp-float img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.whatsapp-float:hover {
+    box-shadow: 0 4px 32px #25d36699;
+    transform: scale(1.08);
+    background: #22c55e;
+}
+
+@media (max-width: 700px) {
+    .whatsapp-float {
+        bottom: 13px;
+        right: 13px;
+        width: 46px;
+        height: 46px;
+    }
+
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        max-width: 98vw;
+    }
+
+    .logo img {
+        height: 100px;
+    }
+}
+
 @media (max-width: 700px) {
     .nav-container {
         flex-direction: row;
@@ -175,9 +282,19 @@ footer {
         position: relative;
         width: 100%;
     }
-    .logo img { height: 70px; }
-    .menu-toggle { display: block; }
-    nav { width: 100%; }
+
+    .logo img {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+    }
+
     nav ul {
         flex-direction: column;
         background: #fff7f2;
@@ -191,21 +308,46 @@ footer {
         z-index: 25;
         display: none;
     }
-    #nav-check:checked ~ nav ul { display: flex; }
+
+    #nav-check:checked~nav ul {
+        display: flex;
+    }
+
     nav ul li {
         margin: 14px 0 0 0;
         width: 100%;
         text-align: center;
     }
-    nav ul li:first-child { margin-top: 0; }
-    #nav-check:checked + .menu-toggle span { background: transparent; }
-    #nav-check:checked + .menu-toggle span:before {
-        transform: rotate(45deg); top: 0;
+
+    nav ul li:first-child {
+        margin-top: 0;
     }
-    #nav-check:checked + .menu-toggle span:after {
-        transform: rotate(-45deg); top: 0;
+
+    #nav-check:checked+.menu-toggle span {
+        background: transparent;
     }
-    main { padding: 14px; }
-    .contenido { padding: 20px 5px 15px 5px; max-width: 99vw; }
-    .grid-cursos { grid-template-columns: 1fr; gap: 18px; }
+
+    #nav-check:checked+.menu-toggle span:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    #nav-check:checked+.menu-toggle span:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    main {
+        padding: 14px;
+    }
+
+    .contenido {
+        padding: 20px 5px 15px 5px;
+        max-width: 99vw;
+    }
+
+    .grid-cursos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
 }

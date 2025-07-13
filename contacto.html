@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Kailash | Escuela Holística</title>
+    <title>Contacto | Mi Kailash</title>
     <meta name="description"
-        content="Un espacio de conexión con tus dones, tu poder y tu verdad. Para que empieces a amarte y brilles como merecés.">
+        content="Contactá con Mi Kailash - Escuela Holística. Enviá tu consulta, sugerencia o pedido de turnos.">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacto.css">
@@ -16,12 +16,8 @@
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="logo-kailash.png" alt="Logo Mi Kailash">
+                <img src="img/logo-kailash.png" alt="Logo Mi Kailash">
             </div>
-            <input type="checkbox" id="nav-check" />
-            <label for="nav-check" class="menu-toggle">
-                <span></span>
-            </label>
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -36,14 +32,51 @@
     </header>
 
     <main>
-        <section class="bienvenida">
+        <section class="contacto-container">
             <h1>Contacto</h1>
+            <p class="contacto-descripcion">
+                ¿Tenés dudas, querés pedir un turno o simplemente conectar? <br>
+                Completá el formulario o escribinos por WhatsApp y te respondemos a la brevedad.
+            </p>
+            <form class="form-contacto" action="mailto:tucorreo@ejemplo.com" method="POST" enctype="text/plain">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required autocomplete="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="redes-contacto">
+                <span>O seguinos en:</span>
+
+                <a href="https://www.instagram.com/kaila.mikailash/" target="_blank">
+                    <img src="img/instagram.svg" alt="Instagram" />
+                </a>
+
+                <a href="https://www.youtube.com/@Mikailashyoga" target="_blank">
+                    <img src="img/youtube.svg" alt="YouTube" />
+                </a>
+
+                <a href="https://www.tiktok.com/@mikailash.yoga" target="_blank">
+                    <img src="img/tiktok.svg" alt="TikTok" />
+                </a>
+
+            </div>
         </section>
     </main>
+
 
     <footer>
         <p>© 2025 Mi Kailash - Escuela Holística | Diseñado por Gonzalo Pasos</p>
     </footer>
+    <a href="https://wa.me/5491128850481?text=Hola%2C%20quiero%20m%C3%A1s%20info%20sobre%20los%20cursos%20de%20Mi%20Kailash"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <img src="img/WhatsApp.svg" alt="WhatsApp" />
+    </a>
 </body>
 
 </html>
