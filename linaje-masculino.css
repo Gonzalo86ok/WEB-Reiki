@@ -1,58 +1,86 @@
+/* linaje-masculino.css */
 .contenido {
     background: #fff7f2;
     border-radius: 22px;
     box-shadow: 0 2px 28px #f5d6c733;
-    max-width: 700px;
+    max-width: 750px;
     width: 98%;
-    margin: 0 auto;
-    padding: 40px 32px 32px 32px;
+    margin: 40px auto 30px auto;
+    padding: 48px 36px 40px 36px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    animation: fadeIn 1.1s;
+    gap: 18px;
 }
+
 .contenido h1 {
-    color: #91723d;
+    color: #b88258;
     text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 8px;
+    font-size: 2.45rem;
+    margin-bottom: 14px;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.contenido h2 {
+    color: #a76a4b;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.45rem;
+    font-weight: 800;
     letter-spacing: 1px;
 }
-.contenido h2 {
-    color: #7b5630;
-    margin-top: 16px;
-    margin-bottom: 8px;
-    font-size: 1.19rem;
-    letter-spacing: 0.6px;
+
+.contenido p, .contenido ul {
+    font-size: 1.17rem;
+    color: #543524;
+    line-height: 1.7;
+    font-weight: 400;
 }
+
 .contenido ul {
-    padding-left: 22px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.contenido li {
     margin-bottom: 8px;
 }
-.contenido li {
-    margin-bottom: 5px;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px);}
-    to   { opacity: 1; transform: none; }
-}
+
 .volver {
-    margin-top: 25px;
+    margin-top: 30px;
     align-self: flex-start;
     background: #ffd7b5;
     color: #b88258;
-    padding: 8px 22px;
-    border-radius: 8px;
+    padding: 11px 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1.13rem;
+    box-shadow: 0 1px 6px #ffe1cf70;
     transition: background .2s, color .2s;
-    font-size: 1rem;
-    box-shadow: 0 1px 5px #ffe1cf70;
 }
 .volver:hover {
     background: #f38c5a;
     color: #fff;
 }
-@media (max-width: 800px) {
-    .contenido { padding: 24px 7px 15px 7px; }
+
+@media (max-width: 900px) {
+    .contenido {
+        padding: 32px 10px 28px 10px;
+        max-width: 98vw;
+    }
+    .contenido h1 { font-size: 2rem; }
+    .contenido h2 { font-size: 1.18rem; }
+    .contenido p, .contenido ul { font-size: 1.07rem; }
+}
+
+@media (max-width: 700px) {
+    .contenido {
+        padding: 15px 3vw 15px 3vw;
+        gap: 12px;
+    }
+    .contenido h1 { font-size: 1.38rem; }
+    .contenido h2 { font-size: 1.01rem; }
+    .contenido p, .contenido ul { font-size: 1rem; }
+    .volver { font-size: 1rem; padding: 9px 17px; }
 }

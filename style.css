@@ -5,18 +5,6 @@ body {
     padding: 0;
 }
 
-/* Tamaño de letra base MÁS GRANDE para toda la web */
-html {
-    font-size: 21px; /* Antes suele ser 16px */
-}
-
-@media (max-width: 900px) {
-    html { font-size: 18px; }
-}
-@media (max-width: 700px) {
-    html { font-size: 15px; }
-}
-
 body {
     min-height: 100vh;
     display: flex;
@@ -26,6 +14,7 @@ body {
     color: #543524;
 }
 
+/* ========== HEADER Y MENU ========== */
 header {
     background: #fff7f2;
     box-shadow: 0 2px 8px #eededb33;
@@ -35,57 +24,55 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: 20px 32px;
     position: relative;
     width: 100%;
+    font-size: 1.32rem;
 }
 
-/* LOGO MÁS GRANDE */
 .logo img {
-    height: 210px;
+    height: 200px;
     width: auto;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 0 2px 12px #eebfa833;
-}
-@media (max-width: 900px) {
-    .logo img { height: 140px; }
-}
-@media (max-width: 700px) {
-    .logo img { height: 100px; }
+    box-shadow: 0 2px 16px #eebfa833;
+    transition: height 0.18s;
 }
 
-/* MENÚ HAMBURGUESA MÁS GRANDE */
 .menu-toggle {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 33px;
-    right: 26px;
+    top: 45px;
+    right: 36px;
     width: 54px;
     height: 54px;
     z-index: 30;
 }
+
 .menu-toggle span,
 .menu-toggle span:before,
 .menu-toggle span:after {
     display: block;
     position: absolute;
     height: 7px;
-    width: 42px;
+    width: 44px;
     background: #b88258;
     border-radius: 5px;
     transition: .3s ease;
 }
+
 .menu-toggle span {
-    top: 21px;
+    top: 24px;
 }
+
 .menu-toggle span:before {
     content: '';
     top: -16px;
 }
+
 .menu-toggle span:after {
     content: '';
     top: 16px;
@@ -110,9 +97,11 @@ nav ul li a {
     color: #995c3d;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.07rem;
+    font-size: 1.32rem;
     transition: color .2s;
     letter-spacing: 0.5px;
+    padding: 13px 24px;
+    border-radius: 7px;
 }
 
 nav ul li a:hover {
@@ -123,13 +112,12 @@ nav ul li a.active,
 nav ul li a.active:visited {
     background: #ffd7b5;
     color: #b88258 !important;
-    border-radius: 7px;
-    padding: 7px 18px;
     font-weight: 900;
     box-shadow: 0 2px 7px #ffe1cfb2;
     transition: background 0.2s, color 0.2s;
 }
 
+/* ========== MAIN ========== */
 main {
     flex: 1 0 auto;
     min-height: 60vh;
@@ -138,6 +126,7 @@ main {
     align-items: center;
 }
 
+/* ========== FOOTER ========== */
 footer {
     background: #f9ebe7;
     color: #8d4d30;
@@ -150,6 +139,37 @@ footer {
     margin-top: auto;
 }
 
+/* ========== BOTÓN WHATSAPP ========== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 999;
+    background: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 4px 18px #25d36655;
+    width: 59px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.18s, transform 0.18s;
+    text-decoration: none;
+}
+
+.whatsapp-float img {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.whatsapp-float:hover {
+    box-shadow: 0 4px 32px #25d36699;
+    transform: scale(1.08);
+    background: #22c55e;
+}
+
+/* ========== CONTENIDO Y GRIDS ========== */
 .contenido {
     background: #fff7f2;
     border-radius: 22px;
@@ -161,21 +181,6 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 14px;
-}
-
-/* TÍTULOS MÁS GRANDES */
-h1, .contenido h1, .metodo-titulo {
-    font-size: 2.8rem !important;
-    font-weight: 900;
-    letter-spacing: 1.3px;
-}
-h2, .contenido h2, .formas-titulo-grande {
-    font-size: 2.1rem !important;
-    font-weight: 800;
-}
-@media (max-width: 700px) {
-    h1, .contenido h1, .metodo-titulo { font-size: 1.7rem !important; }
-    h2, .contenido h2, .formas-titulo-grande { font-size: 1.19rem !important; }
 }
 
 .volver {
@@ -217,13 +222,13 @@ h2, .contenido h2, .formas-titulo-grande {
 }
 
 .curso-card h3 {
-    font-size: 1.13rem;
+    font-size: 1.25rem;
     color: #b88258;
     margin-bottom: 10px;
 }
 
 .curso-card p {
-    font-size: 1.01rem;
+    font-size: 1.13rem;
     color: #6e4323;
     text-align: center;
 }
@@ -232,12 +237,12 @@ h2, .contenido h2, .formas-titulo-grande {
     margin-top: 18px;
     background: #ffd7b5;
     color: #b88258;
-    padding: 6px 20px;
+    padding: 8px 24px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     transition: background .2s, color .2s;
-    font-size: 1rem;
+    font-size: 1.1rem;
     box-shadow: 0 1px 5px #ffe1cf70;
     display: inline-block;
 }
@@ -252,66 +257,74 @@ h2, .contenido h2, .formas-titulo-grande {
     transform: translateY(-4px) scale(1.01);
 }
 
-/* WHATSAPP MÁS GRANDE */
-.whatsapp-float {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    z-index: 999;
-    background: #25d366;
-    border-radius: 50%;
-    box-shadow: 0 4px 18px #25d36655;
-    width: 75px;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 0.18s, transform 0.18s;
-    text-decoration: none;
-}
-.whatsapp-float img {
-    width: 46px;
-    height: 46px;
-    display: block;
-}
-.whatsapp-float:hover {
-    box-shadow: 0 4px 32px #25d36699;
-    transform: scale(1.08);
-    background: #22c55e;
-}
-@media (max-width: 700px) {
-    .whatsapp-float {
-        bottom: 13px;
-        right: 13px;
-        width: 56px;
-        height: 56px;
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 1100px) {
+    .nav-container {
+        max-width: 98vw;
     }
-    .whatsapp-float img {
-        width: 35px;
-        height: 35px;
+    .logo img {
+        height: 140px;
     }
 }
 
 @media (max-width: 900px) {
-    .nav-container {
-        max-width: 98vw;
+    .logo img {
+        height: 120px;
     }
+    .nav-container {
+        padding: 15px 10px;
+        font-size: 1.12rem;
+    }
+    nav ul li a {
+        font-size: 1.13rem;
+        padding: 10px 8px;
+    }
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
+        top: 30px;
+        right: 13px;
+    }
+    .menu-toggle span,
+    .menu-toggle span:before,
+    .menu-toggle span:after {
+        height: 6px;
+        width: 33px;
+    }
+    .menu-toggle span { top: 18px; }
+    .menu-toggle span:before { top: -10px; }
+    .menu-toggle span:after { top: 10px; }
 }
 
 @media (max-width: 700px) {
+    .logo img {
+        height: 90px;
+    }
     .nav-container {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        width: 100%;
+        padding: 10px 4vw;
+        font-size: 1rem;
     }
+    nav ul li a {
+        font-size: 1rem;
+        padding: 9px 6px;
+    }
+
     .menu-toggle {
-        display: block;
+        width: 40px;
+        height: 40px;
+        top: 16px;
+        right: 7px;
     }
-    nav {
-        width: 100%;
+    .menu-toggle span,
+    .menu-toggle span:before,
+    .menu-toggle span:after {
+        height: 5px;
+        width: 28px;
     }
+    .menu-toggle span { top: 13px; }
+    .menu-toggle span:before { top: -8px; }
+    .menu-toggle span:after { top: 8px; }
+
     nav ul {
         flex-direction: column;
         background: #fff7f2;
@@ -325,37 +338,57 @@ h2, .contenido h2, .formas-titulo-grande {
         z-index: 25;
         display: none;
     }
+
     #nav-check:checked~nav ul {
         display: flex;
     }
+
     nav ul li {
         margin: 14px 0 0 0;
         width: 100%;
         text-align: center;
     }
+
     nav ul li:first-child {
         margin-top: 0;
     }
+
     #nav-check:checked+.menu-toggle span {
         background: transparent;
     }
+
     #nav-check:checked+.menu-toggle span:before {
         transform: rotate(45deg);
         top: 0;
     }
+
     #nav-check:checked+.menu-toggle span:after {
         transform: rotate(-45deg);
         top: 0;
     }
+
     main {
         padding: 14px;
     }
+
     .contenido {
         padding: 20px 5px 15px 5px;
         max-width: 99vw;
     }
+
     .grid-cursos {
         grid-template-columns: 1fr;
         gap: 18px;
+    }
+
+    .whatsapp-float {
+        bottom: 13px;
+        right: 13px;
+        width: 46px;
+        height: 46px;
+    }
+    .whatsapp-float img {
+        width: 28px;
+        height: 28px;
     }
 }
