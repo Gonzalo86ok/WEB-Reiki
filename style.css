@@ -5,6 +5,18 @@ body {
     padding: 0;
 }
 
+/* Tamaño de letra base MÁS GRANDE para toda la web */
+html {
+    font-size: 21px; /* Antes suele ser 16px */
+}
+
+@media (max-width: 900px) {
+    html { font-size: 18px; }
+}
+@media (max-width: 700px) {
+    html { font-size: 15px; }
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -30,49 +42,53 @@ header {
     width: 100%;
 }
 
+/* LOGO MÁS GRANDE */
 .logo img {
-    height: 150px;
+    height: 210px;
     width: auto;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0 2px 12px #eebfa833;
 }
+@media (max-width: 900px) {
+    .logo img { height: 140px; }
+}
+@media (max-width: 700px) {
+    .logo img { height: 100px; }
+}
 
+/* MENÚ HAMBURGUESA MÁS GRANDE */
 .menu-toggle {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 35px;
-    right: 28px;
-    width: 36px;
-    height: 36px;
+    top: 33px;
+    right: 26px;
+    width: 54px;
+    height: 54px;
     z-index: 30;
 }
-
 .menu-toggle span,
 .menu-toggle span:before,
 .menu-toggle span:after {
     display: block;
     position: absolute;
-    height: 5px;
-    width: 32px;
+    height: 7px;
+    width: 42px;
     background: #b88258;
     border-radius: 5px;
     transition: .3s ease;
 }
-
 .menu-toggle span {
-    top: 16px;
+    top: 21px;
 }
-
 .menu-toggle span:before {
     content: '';
-    top: -12px;
+    top: -16px;
 }
-
 .menu-toggle span:after {
     content: '';
-    top: 12px;
+    top: 16px;
 }
 
 #nav-check {
@@ -145,6 +161,21 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 14px;
+}
+
+/* TÍTULOS MÁS GRANDES */
+h1, .contenido h1, .metodo-titulo {
+    font-size: 2.8rem !important;
+    font-weight: 900;
+    letter-spacing: 1.3px;
+}
+h2, .contenido h2, .formas-titulo-grande {
+    font-size: 2.1rem !important;
+    font-weight: 800;
+}
+@media (max-width: 700px) {
+    h1, .contenido h1, .metodo-titulo { font-size: 1.7rem !important; }
+    h2, .contenido h2, .formas-titulo-grande { font-size: 1.19rem !important; }
 }
 
 .volver {
@@ -221,6 +252,7 @@ footer {
     transform: translateY(-4px) scale(1.01);
 }
 
+/* WHATSAPP MÁS GRANDE */
 .whatsapp-float {
     position: fixed;
     bottom: 18px;
@@ -229,48 +261,40 @@ footer {
     background: #25d366;
     border-radius: 50%;
     box-shadow: 0 4px 18px #25d36655;
-    width: 59px;
-    height: 59px;
+    width: 75px;
+    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: box-shadow 0.18s, transform 0.18s;
     text-decoration: none;
 }
-
 .whatsapp-float img {
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
     display: block;
 }
-
 .whatsapp-float:hover {
     box-shadow: 0 4px 32px #25d36699;
     transform: scale(1.08);
     background: #22c55e;
 }
-
 @media (max-width: 700px) {
     .whatsapp-float {
         bottom: 13px;
         right: 13px;
-        width: 46px;
-        height: 46px;
+        width: 56px;
+        height: 56px;
     }
-
     .whatsapp-float img {
-        width: 28px;
-        height: 28px;
+        width: 35px;
+        height: 35px;
     }
 }
 
 @media (max-width: 900px) {
     .nav-container {
         max-width: 98vw;
-    }
-
-    .logo img {
-        height: 100px;
     }
 }
 
@@ -282,19 +306,12 @@ footer {
         position: relative;
         width: 100%;
     }
-
-    .logo img {
-        height: 70px;
-    }
-
     .menu-toggle {
         display: block;
     }
-
     nav {
         width: 100%;
     }
-
     nav ul {
         flex-direction: column;
         background: #fff7f2;
@@ -308,44 +325,35 @@ footer {
         z-index: 25;
         display: none;
     }
-
     #nav-check:checked~nav ul {
         display: flex;
     }
-
     nav ul li {
         margin: 14px 0 0 0;
         width: 100%;
         text-align: center;
     }
-
     nav ul li:first-child {
         margin-top: 0;
     }
-
     #nav-check:checked+.menu-toggle span {
         background: transparent;
     }
-
     #nav-check:checked+.menu-toggle span:before {
         transform: rotate(45deg);
         top: 0;
     }
-
     #nav-check:checked+.menu-toggle span:after {
         transform: rotate(-45deg);
         top: 0;
     }
-
     main {
         padding: 14px;
     }
-
     .contenido {
         padding: 20px 5px 15px 5px;
         max-width: 99vw;
     }
-
     .grid-cursos {
         grid-template-columns: 1fr;
         gap: 18px;
