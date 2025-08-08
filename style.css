@@ -310,6 +310,7 @@ footer {
     }
 
     .menu-toggle {
+        display: block;
         width: 40px;
         height: 40px;
         top: 16px;
@@ -339,7 +340,8 @@ footer {
         display: none;
     }
 
-    #nav-check:checked~nav ul {
+    /* ESTE SELECTOR ES EL QUE FUNCIONA */
+    #nav-check:checked ~ nav ul {
         display: flex;
     }
 
@@ -353,16 +355,16 @@ footer {
         margin-top: 0;
     }
 
-    #nav-check:checked+.menu-toggle span {
+    #nav-check:checked + .menu-toggle span {
         background: transparent;
     }
 
-    #nav-check:checked+.menu-toggle span:before {
+    #nav-check:checked + .menu-toggle span:before {
         transform: rotate(45deg);
         top: 0;
     }
 
-    #nav-check:checked+.menu-toggle span:after {
+    #nav-check:checked + .menu-toggle span:after {
         transform: rotate(-45deg);
         top: 0;
     }
