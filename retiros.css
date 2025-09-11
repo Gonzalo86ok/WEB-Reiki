@@ -58,6 +58,7 @@
     justify-content: center;
     margin: 24px 0;
 }
+
 .chakra-card {
     background: #fff;
     border-radius: 15px;
@@ -75,8 +76,8 @@
 
 .retiro-lista-title {
     background: linear-gradient(90deg, #ffe4c7 0%, #ffd7b5 100%);
-    padding: 18px 0 13px 0;
-    border-radius: 13px 13px 0 0;
+    padding: 18px 40px 13px 40px;
+    border-radius: 13px;
     font-size: 1.5rem;
     color: #b88258;
     font-weight: 800;
@@ -84,6 +85,7 @@
     margin-bottom: 0;
     letter-spacing: 1.2px;
     box-shadow: 0 1px 7px #ffd7b525;
+    display: inline-block;
 }
 
 .retiro-lista {
@@ -109,7 +111,7 @@
     font-size: 1.13rem;
     text-align: left;
     position: relative;
-    animation: aparecer 0.6s cubic-bezier(.68,-0.55,.27,1.55) backwards;
+    animation: aparecer 0.6s cubic-bezier(.68, -0.55, .27, 1.55) backwards;
 }
 
 .retiro-lista li:before {
@@ -127,6 +129,7 @@
         opacity: 0;
         transform: translateY(24px) scale(.97);
     }
+
     to {
         opacity: 1;
         transform: none;
@@ -161,6 +164,7 @@
     text-decoration: none;
     transition: background .2s, color .2s;
 }
+
 .retiro-main .btn-wsp:hover {
     background: #1eb958;
     color: #fff;
@@ -183,6 +187,7 @@
     text-decoration: none;
     transition: background 0.2s, color 0.2s;
 }
+
 .retiro-instagram a:hover {
     background: #ffd7b5;
     color: #fff;
@@ -193,6 +198,7 @@
         margin: 20px 2vw;
         padding: 0 4vw 18px 4vw;
     }
+
     .retiro-chakras {
         flex-direction: column;
         gap: 18px;
@@ -204,21 +210,26 @@
     .retiro-main h1 {
         font-size: 1.7rem;
     }
+
     .retiro-main h2 {
         font-size: 1.09rem;
         margin: 22px 0 14px 0;
     }
+
     .retiro-beneficios,
     .retiro-lista {
         font-size: 1.08rem;
     }
+
     .retiro-ofertas {
         font-size: 1rem;
     }
+
     .retiro-main .btn-wsp {
         padding: 10px 12px;
         font-size: 1rem;
     }
+
     .chakra-card {
         font-size: 1rem;
     }

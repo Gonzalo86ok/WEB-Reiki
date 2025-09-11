@@ -1,396 +1,308 @@
-html,
+/* ===========================
+   RESET BÁSICO
+=========================== */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Crimson Pro', serif;
+  background: #fdf6f3;
+  color: #543524;
 }
 
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Crimson Pro', serif;
-    background: #fdf6f3;
-    color: #543524;
-}
-
-/* ========== HEADER Y MENU ========== */
+/* ===========================
+   HEADER + NAV
+=========================== */
 header {
-    background: #fff7f2;
-    box-shadow: 0 2px 8px #eededb33;
+  background: #fff7f2;
+  box-shadow: 0 2px 8px #eededb33;
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px 32px;
-    position: relative;
-    width: 100%;
-    font-size: 1.32rem;
+  /* ancho cómodo para que respire el menú */
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 28px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;             /* separación entre logo y nav */
 }
 
 .logo img {
-    height: 200px;
-    width: auto;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 2px 16px #eebfa833;
-    transition: height 0.18s;
+  height: 180px;
+  width: auto;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 16px #eebfa833;
+  transition: height .18s ease;
 }
 
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 45px;
-    right: 36px;
-    width: 54px;
-    height: 54px;
-    z-index: 30;
-}
-
-.menu-toggle span,
-.menu-toggle span:before,
-.menu-toggle span:after {
-    display: block;
-    position: absolute;
-    height: 7px;
-    width: 44px;
-    background: #b88258;
-    border-radius: 5px;
-    transition: .3s ease;
-}
-
-.menu-toggle span {
-    top: 24px;
-}
-
-.menu-toggle span:before {
-    content: '';
-    top: -16px;
-}
-
-.menu-toggle span:after {
-    content: '';
-    top: 16px;
-}
-
-#nav-check {
-    display: none;
+/* nav ocupa el espacio restante y centra/espacia bien los items */
+.nav-container nav {
+  flex: 1;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centrado global */
+  gap: 56px;               /* separación pareja entre items */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
-    margin-left: 30px;
+nav li {
+  display: inline-flex;
 }
 
-nav ul li a {
-    color: #995c3d;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.32rem;
-    transition: color .2s;
-    letter-spacing: 0.5px;
-    padding: 13px 24px;
-    border-radius: 7px;
+nav a {
+  color: #995c3d;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.22rem;
+  letter-spacing: .5px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  white-space: nowrap;      /* evita saltos en 2 líneas */
+  transition: color .18s ease, background .18s ease, box-shadow .18s ease;
 }
 
-nav ul li a:hover {
-    color: #f38c5a;
+nav a:hover {
+  color: #f38c5a;
 }
 
-nav ul li a.active,
-nav ul li a.active:visited {
-    background: #ffd7b5;
-    color: #b88258 !important;
-    font-weight: 900;
-    box-shadow: 0 2px 7px #ffe1cfb2;
-    transition: background 0.2s, color 0.2s;
+nav a.active,
+nav a.active:visited {
+  background: #ffd7b5;
+  color: #b88258 !important;
+  font-weight: 900;
+  box-shadow: 0 2px 7px #ffe1cfb2;
 }
 
-/* ========== MAIN ========== */
+/* ===========================
+   BOTÓN HAMBURGUESA (checkbox hack)
+=========================== */
+#nav-check {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;              /* se muestra sólo en móvil */
+  cursor: pointer;
+  position: absolute;
+  right: 18px;
+  top: 24px;
+  width: 44px;
+  height: 44px;
+  z-index: 30;
+}
+.menu-toggle span,
+.menu-toggle span::before,
+.menu-toggle span::after {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 32px;
+  background: #b88258;
+  border-radius: 4px;
+  transition: .28s ease;
+}
+.menu-toggle span { top: 20px; left: 6px; }
+.menu-toggle span::before { content: ''; top: -10px; left: 0; }
+.menu-toggle span::after  { content: ''; top:  10px; left: 0; }
+
+/* ===========================
+   MAIN / FOOTER
+=========================== */
 main {
-    flex: 1 0 auto;
-    min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1 0 auto;
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/* ========== FOOTER ========== */
 footer {
-    background: #f9ebe7;
-    color: #8d4d30;
-    text-align: center;
-    padding: 18px 0;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    flex-shrink: 0;
-    width: 100%;
-    margin-top: auto;
+  background: #f9ebe7;
+  color: #8d4d30;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: auto;
 }
 
-/* ========== BOTÓN WHATSAPP ========== */
+/* ===========================
+   BOTÓN WHATSAPP
+=========================== */
 .whatsapp-float {
-    position: fixed;
-    bottom: 18px;
-    right: 18px;
-    z-index: 999;
-    background: #25d366;
-    border-radius: 50%;
-    box-shadow: 0 4px 18px #25d36655;
-    width: 59px;
-    height: 59px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: box-shadow 0.18s, transform 0.18s;
-    text-decoration: none;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 999;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px #25d36655;
+  width: 59px;
+  height: 59px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow .18s, transform .18s;
+  text-decoration: none;
 }
-
-.whatsapp-float img {
-    width: 36px;
-    height: 36px;
-    display: block;
-}
-
+.whatsapp-float img { width: 36px; height: 36px; display: block; }
 .whatsapp-float:hover {
-    box-shadow: 0 4px 32px #25d36699;
-    transform: scale(1.08);
-    background: #22c55e;
+  box-shadow: 0 4px 32px #25d36699;
+  transform: scale(1.08);
+  background: #22c55e;
 }
 
-/* ========== CONTENIDO Y GRIDS ========== */
+/* ===========================
+   CONTENIDO GENERICO
+=========================== */
 .contenido {
-    background: #fff7f2;
-    border-radius: 22px;
-    box-shadow: 0 2px 28px #f5d6c733;
-    max-width: 700px;
-    width: 98%;
-    margin: 0 auto;
-    padding: 40px 32px 32px 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  background: #fff7f2;
+  border-radius: 22px;
+  box-shadow: 0 2px 28px #f5d6c733;
+  max-width: 700px;
+  width: 98%;
+  margin: 0 auto;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-
 .volver {
-    margin-top: 25px;
-    align-self: flex-start;
-    background: #ffd7b5;
-    color: #b88258;
-    padding: 8px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background .2s, color .2s;
-    font-size: 1rem;
-    box-shadow: 0 1px 5px #ffe1cf70;
+  margin-top: 25px;
+  align-self: flex-start;
+  background: #ffd7b5;
+  color: #b88258;
+  padding: 8px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s, color .2s;
+  font-size: 1rem;
+  box-shadow: 0 1px 5px #ffe1cf70;
 }
+.volver:hover { background: #f38c5a; color: #fff; }
 
-.volver:hover {
-    background: #f38c5a;
-    color: #fff;
-}
-
+/* Tarjetas/grids (cursos, etc.) */
 .grid-cursos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-    margin-top: 32px;
-    width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
+  width: 100%;
 }
-
 .curso-card {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 2px 18px #eededb50;
-    padding: 26px 20px 22px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: box-shadow .2s, transform .2s;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px #eededb50;
+  padding: 26px 20px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow .2s, transform .2s;
 }
-
-.curso-card h3 {
-    font-size: 1.25rem;
-    color: #b88258;
-    margin-bottom: 10px;
-}
-
-.curso-card p {
-    font-size: 1.13rem;
-    color: #6e4323;
-    text-align: center;
-}
-
+.curso-card h3 { font-size: 1.25rem; color: #b88258; margin-bottom: 10px; }
+.curso-card p  { font-size: 1.13rem; color: #6e4323; text-align: center; }
 .curso-card .leer-mas {
-    margin-top: 18px;
-    background: #ffd7b5;
-    color: #b88258;
-    padding: 8px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background .2s, color .2s;
-    font-size: 1.1rem;
-    box-shadow: 0 1px 5px #ffe1cf70;
-    display: inline-block;
+  margin-top: 18px;
+  background: #ffd7b5;
+  color: #b88258;
+  padding: 8px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s, color .2s;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 5px #ffe1cf70;
+}
+.curso-card .leer-mas:hover { background: #f38c5a; color: #fff; }
+.curso-card:hover { box-shadow: 0 4px 28px #ffccab75; transform: translateY(-4px) scale(1.01); }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* Ligeros ajustes en desktop medio */
+@media (max-width: 1200px) {
+  .logo img { height: 160px; }
+  nav ul { gap: 42px; }
 }
 
-.curso-card .leer-mas:hover {
-    background: #f38c5a;
-    color: #fff;
+/* Tablet */
+@media (max-width: 960px) {
+  .logo img { height: 130px; }
+  nav a     { font-size: 1.12rem; padding: 10px 12px; }
+  nav ul    { gap: 28px; }
 }
 
-.curso-card:hover {
-    box-shadow: 0 4px 28px #ffccab75;
-    transform: translateY(-4px) scale(1.01);
+/* MÓVIL: menú hamburguesa desplegable */
+@media (max-width: 720px) {
+  .logo img { height: 90px; }
+
+  .menu-toggle { display: block; }
+
+  /* El contenedor del nav se vuelve overlay tipo dropdown */
+  .nav-container nav {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;                /* oculto por defecto */
+    flex-direction: column;
+    gap: 0;
+    background: #fff7f2;
+    box-shadow: 0 4px 24px #eededb88;
+    padding: 8px 0 14px 0;
+  }
+
+  nav li { width: 100%; }
+  nav a  {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 1.05rem;
+    border-radius: 0;            /* look de lista */
+  }
+
+  /* Mostrar menú cuando el checkbox está activo */
+  #nav-check:checked ~ nav ul { display: flex; }
+
+  /* Animación del ícono hamburguesa -> X */
+  #nav-check:checked + .menu-toggle span { background: transparent; }
+  #nav-check:checked + .menu-toggle span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  #nav-check:checked + .menu-toggle span::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  /* WhatsApp más chico */
+  .whatsapp-float { bottom: 13px; right: 13px; width: 46px; height: 46px; }
+  .whatsapp-float img { width: 28px; height: 28px; }
 }
 
-/* ========== MEDIA QUERIES ========== */
-@media (max-width: 1100px) {
-    .nav-container {
-        max-width: 98vw;
-    }
-    .logo img {
-        height: 140px;
-    }
-}
-
-@media (max-width: 900px) {
-    .logo img {
-        height: 120px;
-    }
-    .nav-container {
-        padding: 15px 10px;
-        font-size: 1.12rem;
-    }
-    nav ul li a {
-        font-size: 1.13rem;
-        padding: 10px 8px;
-    }
-    .menu-toggle {
-        width: 44px;
-        height: 44px;
-        top: 30px;
-        right: 13px;
-    }
-    .menu-toggle span,
-    .menu-toggle span:before,
-    .menu-toggle span:after {
-        height: 6px;
-        width: 33px;
-    }
-    .menu-toggle span { top: 18px; }
-    .menu-toggle span:before { top: -10px; }
-    .menu-toggle span:after { top: 10px; }
-}
-
-@media (max-width: 700px) {
-    .logo img {
-        height: 90px;
-    }
-    .nav-container {
-        padding: 10px 4vw;
-        font-size: 1rem;
-    }
-    nav ul li a {
-        font-size: 1rem;
-        padding: 9px 6px;
-    }
-
-    .menu-toggle {
-        display: block;
-        width: 40px;
-        height: 40px;
-        top: 16px;
-        right: 7px;
-    }
-    .menu-toggle span,
-    .menu-toggle span:before,
-    .menu-toggle span:after {
-        height: 5px;
-        width: 28px;
-    }
-    .menu-toggle span { top: 13px; }
-    .menu-toggle span:before { top: -8px; }
-    .menu-toggle span:after { top: 8px; }
-
-    nav ul {
-        flex-direction: column;
-        background: #fff7f2;
-        box-shadow: 0 4px 24px #eededb88;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        width: 100vw;
-        max-width: none;
-        padding: 18px 0 16px 0;
-        z-index: 25;
-        display: none;
-    }
-
-    /* ESTE SELECTOR ES EL QUE FUNCIONA */
-    #nav-check:checked ~ nav ul {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 14px 0 0 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li:first-child {
-        margin-top: 0;
-    }
-
-    #nav-check:checked + .menu-toggle span {
-        background: transparent;
-    }
-
-    #nav-check:checked + .menu-toggle span:before {
-        transform: rotate(45deg);
-        top: 0;
-    }
-
-    #nav-check:checked + .menu-toggle span:after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    main {
-        padding: 14px;
-    }
-
-    .contenido {
-        padding: 20px 5px 15px 5px;
-        max-width: 99vw;
-    }
-
-    .grid-cursos {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .whatsapp-float {
-        bottom: 13px;
-        right: 13px;
-        width: 46px;
-        height: 46px;
-    }
-    .whatsapp-float img {
-        width: 28px;
-        height: 28px;
-    }
+/* Móvil pequeño */
+@media (max-width: 380px) {
+  nav a { font-size: .98rem; }
+  nav ul { padding-top: 6px; }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contacto.css">
 </head>
+
 <body>
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="img/logo-kailash.png" alt="Logo Mi Kailash">
+                <a href="index.html">
+                    <img src="img/logo-kailash.png" alt="Logo Mi Kailash">
+                </a>
             </div>
+
             <input type="checkbox" id="nav-check" />
             <label for="nav-check" class="menu-toggle">
                 <span></span>
@@ -23,7 +28,8 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="metodo.html">Método Kai BA</a></li>
-                    <li><a href="cursos.html">Cursos y Talleres</a></li>
+                    <li><a href="cursos.html">Cursos con maestría</a></li>
+                    <li><a href="talleres.html">Talleres de sanación</a></li>
                     <li><a href="retiros.html">Retiros</a></li>
                     <li><a href="contacto.html" class="active">Contacto</a></li>
                 </ul>
@@ -41,13 +47,13 @@
             <form class="contacto-form" action="mailto:kailash.arcoiris@gmail.com" method="POST" enctype="text/plain">
                 <label for="nombre">Nombre</label>
                 <input type="text" id="nombre" name="nombre" required>
-                
+
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
-                
+
                 <label for="mensaje">Mensaje</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                
+
                 <button type="submit">Enviar mensaje</button>
             </form>
             <div class="contacto-redes">
@@ -75,4 +81,5 @@
         <p>© 2025 Mi Kailash - Escuela Holística | Diseñado por Gonzalo Pasos</p>
     </footer>
 </body>
+
 </html>

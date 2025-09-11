@@ -1,102 +1,128 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cursos y Talleres | Mi Kailash</title>
-    <meta name="description" content="Descubrí todos los cursos, talleres y formaciones de Mi Kailash para tu crecimiento personal, energético y espiritual.">
+    <meta name="description"
+        content="Formaciones y talleres: Reiki Lunar, Reiki Angelical, Reiki María y Registros Akáshicos. Sanación energética y expansión de conciencia." />
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cursos.css">
 </head>
+
 <body>
     <header>
         <div class="nav-container">
             <div class="logo">
-                <img src="img/logo-kailash.png" alt="Logo Mi Kailash">
+                <a href="index.html">
+                    <img src="img/logo-kailash.png" alt="Logo Mi Kailash">
+                </a>
             </div>
-            <input type="checkbox" id="nav-check" />
-            <label for="nav-check" class="menu-toggle">
-                <span></span>
-            </label>
+
+
+            <!-- Menú hamburguesa (usa estilos de style.css) -->
+            <input type="checkbox" id="nav-check">
+            <label for="nav-check" class="menu-toggle"><span></span></label>
+
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="metodo.html">Método Kai BA</a></li>
-                    <li><a href="cursos.html" class="active">Cursos y Talleres</a></li>
+                    <li><a href="cursos.html" class="active">Cursos con maestría</a></li>
+                    <li><a href="talleres.html">Talleres de sanación</a></li>
                     <li><a href="retiros.html">Retiros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
-        <section class="cursos-main">
-            <h1>Cursos y Talleres</h1>
-            <h2>Tu camino de transformación comienza acá</h2>
-            <p>
-                Elegí la formación o taller que resuene con tu momento. Todos los cursos están diseñados para acompañar procesos profundos de sanación, autoconocimiento y expansión espiritual. Hacé click en cada tarjeta para conocer el detalle de cada propuesta.
+        <section class="cursos">
+            <h1>Cursos con maestría</h1>
+            <p class="intro">
+                Descubrí los cursos de Mi Kailash. Cada uno está diseñado para guiarte en un camino de sanación,
+                conexión espiritual y empoderamiento personal.
             </p>
+
             <div class="cursos-grid">
+                <!-- Reiki Kundalini -->
                 <div class="curso-card">
-                    <h3>Linaje Femenino</h3>
-                    <p>Saná la energía ancestral femenina, liberá patrones heredados y reconectá con tu poder femenino.</p>
-                    <a href="linaje-femenino.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Kundalini</h2>
+                    <p>Activá la energía kundalini para despertar tu poder interior y expandir tu conciencia.</p>
+                    <a href="reiki-kundalini.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki María Magdalena -->
                 <div class="curso-card">
-                    <h3>Linaje Masculino</h3>
-                    <p>Reconciliate con tu linaje paterno, integrá la energía masculina sana y equilibrada.</p>
-                    <a href="linaje-masculino.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki María Magdalena</h2>
+                    <p>Sanación profunda y conexión con la energía crística femenina de María Magdalena.</p>
+                    <a href="reiki-maria-magdalena.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki Ganesha -->
                 <div class="curso-card">
-                    <h3>Sanación de la Niña Interior</h3>
-                    <p>Recuperá tu alegría, confianza y amor propio sanando heridas de la infancia.</p>
-                    <a href="sanacion-nina-interior.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Ganesha</h2>
+                    <p>Conectá con la energía de Ganesha para superar obstáculos y atraer abundancia.</p>
+                    <a href="reiki-ganesha.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki Cristal Arcoiris -->
                 <div class="curso-card">
-                    <h3>Corte de Lazos Kármicos de Pareja</h3>
-                    <p>Liberá vínculos del pasado, saná tu energía y abrí tu corazón al amor consciente.</p>
-                    <a href="corte-lazos-pareja.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Cristal Arcoiris</h2>
+                    <p>Sanación con cristales y colores para equilibrar chakras y elevar la vibración.</p>
+                    <a href="reiki-cristal-arcoiris.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki Usui -->
                 <div class="curso-card">
-                    <h3>Manifestación: Crea tus Sueños</h3>
-                    <p>Aprendé a manifestar y concretar tus deseos con técnicas energéticas y metafísicas.</p>
-                    <a href="manifestacion.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Usui</h2>
+                    <p>El sistema tradicional japonés para autosanación y sanación de otros.</p>
+                    <a href="reiki-usui.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki Lunar -->
                 <div class="curso-card">
-                    <h3>Reiki Kundalini</h3>
-                    <p>Despertá tu energía vital, saná y elevá tu conciencia con el poder de la kundalini y el Reiki.</p>
-                    <a href="reiki-kundalini.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Lunar</h2>
+                    <p>Conectá con la energía de la luna para armonizar ciclos y potenciar tu intuición.</p>
+                    <a href="reiki-lunar.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki Angelical -->
                 <div class="curso-card">
-                    <h3>Reiki María Magdalena</h3>
-                    <p>Sanación y empoderamiento desde la energía femenina crística de María Magdalena.</p>
-                    <a href="reiki-maria-magdalena.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki Angelical</h2>
+                    <p>Trabajá con la guía y sanación de los ángeles para elevar tu vibración.</p>
+                    <a href="reiki-angelical.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Reiki María -->
                 <div class="curso-card">
-                    <h3>Reiki Ganesha</h3>
-                    <p>Activá la energía de la abundancia, la protección y la superación de obstáculos.</p>
-                    <a href="reiki-ganesha.html" class="leer-mas">Ver más</a>
+                    <h2>Reiki María</h2>
+                    <p>Sanación y amor universal desde la energía de la Virgen María.</p>
+                    <a href="reiki-maria.html" class="leer-mas">Leer más</a>
                 </div>
+
+                <!-- Registros Akáshicos -->
                 <div class="curso-card">
-                    <h3>Reiki Cristal Arcoiris</h3>
-                    <p>Saná con la energía de los cristales y los colores para elevar tu vibración.</p>
-                    <a href="reiki-cristal-arcoiris.html" class="leer-mas">Ver más</a>
-                </div>
-                <div class="curso-card">
-                    <h3>Reiki Usui</h3>
-                    <p>Curso y Maestría en Reiki Usui tradicional japonés. Sanación energética y autosanación en todos los niveles.</p>
-                    <a href="reiki-usui.html" class="leer-mas">Ver más</a>
+                    <h2>Registros Akáshicos</h2>
+                    <p>Accedé a la memoria del alma para obtener guía y claridad en tu vida.</p>
+                    <a href="registros.html" class="leer-mas">Leer más</a>
                 </div>
             </div>
         </section>
     </main>
-    <!-- Botón de WhatsApp flotante -->
-    <a href="https://wa.me/5491128850481" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+
+
+    <a class="whatsapp-float" href="https://wa.me/5491128850481" target="_blank" rel="noopener"
+        title="Escribime por WhatsApp">
         <img src="img/WhatsApp.svg" alt="WhatsApp">
     </a>
+
     <footer>
         <p>© 2025 Mi Kailash - Escuela Holística | Diseñado por Gonzalo Pasos</p>
     </footer>
 </body>
+
 </html>

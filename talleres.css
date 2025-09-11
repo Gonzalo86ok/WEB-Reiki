@@ -77,18 +77,6 @@
     line-height: 1.5;
 }
 
-.curso-card ul {
-    font-size: 0.96rem;
-    margin-bottom: 10px;
-    color: #6e3d29;
-    padding-left: 18px;
-    text-align: left;
-}
-
-.curso-card li {
-    margin-bottom: 5px;
-}
-
 .leer-mas {
     align-self: center;
     background: #ffd7b5;
@@ -106,19 +94,6 @@
 .leer-mas:hover {
     background: #f38c5a;
     color: #fff;
-}
-
-.detalle-curso {
-    max-width: 700px;
-    margin: 25px auto 15px auto;
-    background: #fff;
-    padding: 16px 22px;
-    border-radius: 14px;
-    font-size: 1.07rem;
-    color: #91543c;
-    box-shadow: 0 2px 9px #ffe1cf66;
-    text-align: center;
-    border: 2px solid #fbeee2;
 }
 
 /* Responsive */
@@ -140,8 +115,5 @@
     }
     .curso-card {
         padding: 18px 7px 14px 7px;
-    }
-    .detalle-curso {
-        padding: 12px 6px;
     }
 }

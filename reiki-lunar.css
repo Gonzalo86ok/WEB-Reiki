@@ -1,0 +1,89 @@
+/* Contenedor base (armonizado con el resto del sitio) */
+.contenido {
+  background: #fff7f2;
+  border-radius: 22px;
+  box-shadow: 0 2px 28px #f5d6c733;
+  max-width: 750px;
+  width: 98%;
+  margin: 32px auto;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Titulares y jerarquía de color/tamaño */
+.contenido h1 {
+  color: #b88258;
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+  letter-spacing: 1.2px;
+  font-weight: 900;
+}
+
+.contenido h2 {
+  color: #a76a4b;
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 1.35rem;
+  letter-spacing: 0.5px;
+}
+
+/* Texto */
+.contenido p,
+.contenido ul {
+  font-size: 1.12rem;
+  color: #543524;
+  line-height: 1.65;
+}
+
+.contenido ul {
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+.contenido li {
+  margin-bottom: 7px;
+}
+
+/* Frase destacada */
+.frase-destacada {
+  color: #b88258;
+  font-size: 1.14rem;
+  font-style: italic;
+  text-align: center;
+  margin: 8px 0 18px 0;
+  text-shadow: 0 1px 7px #ffe1cf50;
+}
+
+/* Botón volver */
+.volver {
+  margin-top: 25px;
+  align-self: flex-start;
+  background: #ffd7b5;
+  color: #b88258;
+  padding: 10px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .2s, color .2s, transform .12s;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 6px #ffe1cf70;
+}
+.volver:hover {
+  background: #f38c5a;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .contenido {
+    padding: 26px 12px 18px 12px;
+    margin: 18px auto;
+  }
+  .contenido h1 { font-size: 1.7rem; }
+  .contenido h2 { font-size: 1.18rem; }
+  .contenido p, .contenido ul { font-size: 1.02rem; }
+}
