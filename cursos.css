@@ -5,7 +5,7 @@
     padding: 0 20px 30px 20px;
 }
 
-.cursos h1, 
+.cursos h1,
 .cursos h2 {
     text-align: center;
     margin-bottom: 16px;
@@ -60,7 +60,7 @@
     transform: translateY(-6px) scale(1.015);
 }
 
-.curso-card h2, 
+.curso-card h2,
 .curso-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -89,25 +89,43 @@
     margin-bottom: 5px;
 }
 
-.leer-mas {
-    align-self: center;
+/* ---------- BOTONES (UNIFICADOS) ---------- */
+.botones-curso {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Base compartida por ambos botones */
+.leer-mas,
+.btn-video {
     background: #ffd7b5;
     color: #b88258;
     padding: 9px 20px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background .2s, color .2s;
     font-size: 1rem;
-    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
     box-shadow: 0 1px 5px #ffe1cf70;
+    transition: background .2s, color .2s, transform .1s;
+    display: inline-flex;            /* asegura misma altura */
+    align-items: center;             /* centra el ícono con el texto */
+    justify-content: center;
+    gap: 6px;                        /* espacio si usás ícono 🎥 */
+    min-width: 122px;                /* ancho mínimo igual para los dos */
+    line-height: 1;                  /* altura de línea consistente */
 }
 
-.leer-mas:hover {
+.leer-mas:hover,
+.btn-video:hover {
     background: #f38c5a;
     color: #fff;
+    transform: scale(1.03);
 }
 
+/* ---------- Detalle ---------- */
 .detalle-curso {
     max-width: 700px;
     margin: 25px auto 15px auto;
@@ -121,13 +139,14 @@
     border: 2px solid #fbeee2;
 }
 
-/* Responsive */
+/* ---------- Responsive ---------- */
 @media (max-width: 950px) {
     .cursos-grid {
         flex-direction: column;
         gap: 18px;
         align-items: center;
     }
+
     .curso-card {
         max-width: 95vw;
         min-width: 0;
@@ -138,9 +157,11 @@
     .cursos {
         padding: 0 7px 20px 7px;
     }
+
     .curso-card {
         padding: 18px 7px 14px 7px;
     }
+
     .detalle-curso {
         padding: 12px 6px;
     }

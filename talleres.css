@@ -1,12 +1,14 @@
-.cursos {
+/* ====== CONTENEDOR Y TITULOS ====== */
+.cursos,
+.talleres {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px 30px 20px;
 }
 
-.cursos h1, 
-.cursos h2 {
+.cursos h1, .cursos h2,
+.talleres h1, .talleres h2 {
     text-align: center;
     margin-bottom: 16px;
     color: #b88258;
@@ -14,7 +16,8 @@
     font-size: 2rem;
 }
 
-.cursos h2 {
+.cursos h2,
+.talleres h2 {
     font-size: 1.4rem;
     margin-top: 48px;
     margin-bottom: 24px;
@@ -30,7 +33,9 @@
     line-height: 1.6;
 }
 
-.cursos-grid {
+/* ====== GRID DE TARJETAS ====== */
+.cursos-grid,
+.talleres-grid {             /* por si preferís usar .talleres-grid */
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -39,7 +44,9 @@
     width: 100%;
 }
 
-.curso-card {
+/* ====== TARJETA ====== */
+.curso-card,
+.taller-card {               /* alias por si cambiás el nombre en HTML */
     background: #fff7f2;
     border-radius: 16px;
     box-shadow: 0 2px 16px #ffe1cf70;
@@ -55,13 +62,14 @@
     border: 2px solid #fbeee2;
 }
 
-.curso-card:hover {
+.curso-card:hover,
+.taller-card:hover {
     box-shadow: 0 6px 24px #ffccab80;
     transform: translateY(-6px) scale(1.015);
 }
 
-.curso-card h2, 
-.curso-card h3 {
+.curso-card h2, .curso-card h3,
+.taller-card h2, .taller-card h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
     color: #a76a4b;
@@ -69,7 +77,8 @@
     text-align: center;
 }
 
-.curso-card p {
+.curso-card p,
+.taller-card p {
     font-size: 1.05rem;
     color: #543524;
     margin-bottom: 12px;
@@ -77,43 +86,101 @@
     line-height: 1.5;
 }
 
-.leer-mas {
-    align-self: center;
+.curso-card ul,
+.taller-card ul {
+    font-size: 0.96rem;
+    margin-bottom: 10px;
+    color: #6e3d29;
+    padding-left: 18px;
+    text-align: left;
+}
+
+.curso-card li,
+.taller-card li {
+    margin-bottom: 5px;
+}
+
+/* ====== BOTONES UNIFICADOS ====== */
+.botones-curso,
+.botones-taller {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* Base compartida para ambos botones (leer más / ver video) */
+.leer-mas,
+.btn-video {
     background: #ffd7b5;
     color: #b88258;
     padding: 9px 20px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background .2s, color .2s;
     font-size: 1rem;
-    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
     box-shadow: 0 1px 5px #ffe1cf70;
+    transition: background .2s, color .2s, transform .1s;
+    display: inline-flex;        /* misma altura */
+    align-items: center;         /* centra icono y texto */
+    justify-content: center;
+    gap: 6px;                    /* espacio para 🎥 si lo usás */
+    min-width: 122px;            /* ancho mínimo igual para ambos */
+    line-height: 1;
 }
 
-.leer-mas:hover {
+.leer-mas:hover,
+.btn-video:hover {
     background: #f38c5a;
     color: #fff;
+    transform: scale(1.03);
 }
 
-/* Responsive */
+/* ====== BLOQUE DETALLE (si lo usás aquí también) ====== */
+.detalle-curso,
+.detalle-taller {
+    max-width: 700px;
+    margin: 25px auto 15px auto;
+    background: #fff;
+    padding: 16px 22px;
+    border-radius: 14px;
+    font-size: 1.07rem;
+    color: #91543c;
+    box-shadow: 0 2px 9px #ffe1cf66;
+    text-align: center;
+    border: 2px solid #fbeee2;
+}
+
+/* ====== RESPONSIVE ====== */
 @media (max-width: 950px) {
-    .cursos-grid {
+    .cursos-grid,
+    .talleres-grid {
         flex-direction: column;
         gap: 18px;
         align-items: center;
     }
-    .curso-card {
+
+    .curso-card,
+    .taller-card {
         max-width: 95vw;
         min-width: 0;
     }
 }
 
 @media (max-width: 700px) {
-    .cursos {
+    .cursos,
+    .talleres {
         padding: 0 7px 20px 7px;
     }
-    .curso-card {
+
+    .curso-card,
+    .taller-card {
         padding: 18px 7px 14px 7px;
+    }
+
+    .detalle-curso,
+    .detalle-taller {
+        padding: 12px 6px;
     }
 }

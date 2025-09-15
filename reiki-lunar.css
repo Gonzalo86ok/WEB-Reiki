@@ -71,10 +71,35 @@
   font-size: 1.05rem;
   box-shadow: 0 1px 6px #ffe1cf70;
 }
+
 .volver:hover {
   background: #f38c5a;
   color: #fff;
   transform: scale(1.03);
+}
+
+.video-boton {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-video {
+  display: inline-block;
+  background: #ffd7b5;
+  color: #b88258;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 12px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #ffe1cf80;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn-video:hover {
+  background: #f38c5a;
+  color: #fff;
+  transform: scale(1.05);
 }
 
 /* Responsive */
@@ -83,7 +108,17 @@
     padding: 26px 12px 18px 12px;
     margin: 18px auto;
   }
-  .contenido h1 { font-size: 1.7rem; }
-  .contenido h2 { font-size: 1.18rem; }
-  .contenido p, .contenido ul { font-size: 1.02rem; }
+
+  .contenido h1 {
+    font-size: 1.7rem;
+  }
+
+  .contenido h2 {
+    font-size: 1.18rem;
+  }
+
+  .contenido p,
+  .contenido ul {
+    font-size: 1.02rem;
+  }
 }
